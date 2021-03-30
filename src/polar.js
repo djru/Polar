@@ -1,7 +1,6 @@
-import "./styles.css";
 import { useEffect, useState } from "react";
 
-const createStore = (r, s) => {
+export const createStore = (r, s) => {
   // will hold all the set functions from all useStates
   const subs = {};
 
@@ -63,27 +62,4 @@ const createStore = (r, s) => {
   return useHook;
 };
 
-const useGlobalState = createStore(
-  {
-    reset: (s) => {
-      return { num: 0 };
-    },
-    increment: (s) => {
-      return { ...s, num: (s.num += 1) };
-    },
-    decrement: (s) => {
-      return { ...s, num: (s.num -= 1) };
-    }
-  },
-  { num: 0 }
-);
-
-export default function App() {
-  const { num, increment } = useGlobalState();
-
-  return (
-    <div className="App">
-      <h1 onClick={increment}>{num}</h1>
-    </div>
-  );
-}
+export default createStore;

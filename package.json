@@ -1,9 +1,9 @@
 {
-  "name": "react-global-state-management-demo-without-context",
+  "name": "polar",
   "version": "1.0.0",
-  "description": "",
+  "description": "React state management",
   "keywords": [],
-  "main": "src/index.js",
+  "main": "demo/index.js",
   "dependencies": {
     "react": "17.0.2",
     "react-dom": "17.0.2",
