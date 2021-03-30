@@ -1,2 +1,2 @@
 # Polar
-Created with CodeSandbox
+A tiny React global state management tool
